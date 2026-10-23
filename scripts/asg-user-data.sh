@@ -2,6 +2,7 @@
 set -euo pipefail
 exec > >(tee -a /var/log/cloudbusters-bootstrap.log) 2>&1
 export DEBIAN_FRONTEND=noninteractive
+export ENABLE_CW_LOGS=1
 
 apt-get -o Acquire::Retries=5 update
 apt-get -o Acquire::Retries=5 install -y ca-certificates curl unzip xz-utils
@@ -67,6 +68,11 @@ SERVICE
 
 systemctl daemon-reload
 systemctl enable --now cloudbusters
+
+# Enabled only after the instance role's scoped log-write policy is installed.
+if [ "${ENABLE_CW_LOGS:-0}" = "1" ]; then
+  bash /opt/cloudbusters/app/scripts/setup-cloudwatch.sh
+fi
 
 for attempt in $(seq 1 30); do
   if curl --fail --silent --max-time 12 http://127.0.0.1:3000/api/health >/dev/null; then
