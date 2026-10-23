@@ -6,7 +6,7 @@ Our project is a Scalable Multi-Tier Web Application. Its presentation tier is a
 
 Users enter through an Application Load Balancer. Its target group forwards requests to application instances managed by an Auto Scaling Group. Each instance starts from a Launch Template, downloads an allowlisted application ZIP from private S3, installs its locked dependencies and starts a systemd service. Instances use an IAM role to retrieve the database password from an encrypted Systems Manager parameter. The password is not in user data or the deployment archive.
 
-We have demonstrated creating and retrieving users, persistent RDS storage, traffic distribution, manual scale-out, CPU-policy scale-in, and automatic replacement after an application service failure. CloudWatch collects application logs and displays infrastructure metrics. Consult CURRENT_STATE.md for the final CPU scale-out test result.
+We have demonstrated creating and retrieving users, persistent RDS storage, traffic distribution, automatic CPU-triggered scale-out, CPU-policy scale-in, and automatic replacement after an application service failure. CloudWatch collects application logs and displays infrastructure metrics. At 17:39:27 UTC on 23 October, the high CPU alarm changed desired capacity from one to two; the new instance became healthy.
 
 S3 static assets are prepared in a separate private bucket. CloudFront creation was rejected by AWS because this account needs verification, so CDN delivery is not claimed as complete. The current website uses HTTP, and the economical single-instance ASG setting is not continuous multi-AZ availability. These are disclosed limitations, not hidden implementation claims.
 
@@ -28,7 +28,7 @@ S3 static assets are prepared in a separate private bucket. CloudFront creation 
 5. Show ASG Launch Template version and non-secret user data.
 6. Show IAM role's parameter-read, deployment-read and scoped log-write policies. Never open the parameter's decrypted value.
 7. Show private RDS networking and SG source reference.
-8. Show successful ASG Activity events with causes: manual scale-out, policy scale-in, ELB-triggered replacement; include CPU-triggered scale-out only if verified in CURRENT_STATE.md.
+8. Show successful ASG Activity events with causes: CPU-triggered scale-out, policy scale-in, and ELB-triggered replacement. Distinguish earlier manual scale-out from the genuine high-CPU event recorded in CURRENT_STATE.md.
 9. Open CloudWatch CloudBusters dashboard and /cloudbusters/app log stream.
 10. Show S3 private deployment/static buckets and disclose the CloudFront verification blocker.
 

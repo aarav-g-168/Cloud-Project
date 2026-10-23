@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-10-23T17:45:50.150Z",
+  "results": [
+    {
+      "test": "health",
+      "status": 200,
+      "hostname": "ip-172-30-10-197",
+      "databaseConnected": true
+    },
+    {
+      "test": "frontend HTML",
+      "status": 200
+    },
+    {
+      "test": "/style.css",
+      "status": 200
+    },
+    {
+      "test": "/app.js",
+      "status": 200
+    },
+    {
+      "test": "POST /api/users + persistent GET + duplicate and invalid input",
+      "status": "PASS",
+      "createdId": 8
+    },
+    {
+      "test": "ALB host sampling",
+      "hosts": [
+        "ip-172-30-10-197",
+        "ip-172-30-11-4"
+      ]
+    }
+  ]
+}
