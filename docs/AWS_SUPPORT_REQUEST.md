@@ -10,6 +10,10 @@ Submitted with the account owner's explicit authorization on 23 October 2026 at 
 - The form stated a response within 24 hours; this is not a guarantee of verification completion.
 - Evidence: [submitted case](evidence/aws-support-case-submitted.jpg)
 
+## Deadline follow-up
+
+With explicit user authorization, posted a follow-up to the same case on **24 October 2026 at 00:09 IST**. It requests expedited verification for the 25 October project deadline and completion on 24 October, asks whether the owner must take any action, and explicitly declines all paid upgrades/add-ons. No AWS agent reply was visible at the time. [Posted follow-up evidence](evidence/aws-support-deadline-followup.jpg).
+
 **Subject:** Account verification required to create CloudFront resources
 
 Hello AWS Support,
