@@ -6,6 +6,8 @@ Actual AWS rejection on 23 October 2026:
 
 No CloudFront distribution/domain was created. Contacting AWS Support or submitting account verification is an account-owner action and was not performed by the assistant.
 
+Creation was retried after the request to finish remaining work on 23 October 2026, and AWS returned the same rejection. The retry disabled automatic bucket-policy changes; no additional bucket access was granted. A ready-to-send request is in AWS_SUPPORT_REQUEST.md.
+
 ## Prepared resources
 
 - Private SSE-S3 bucket: cloudbusters-static-723695984301, ap-south-1.
