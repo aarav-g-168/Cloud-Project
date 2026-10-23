@@ -1,0 +1,147 @@
+{
+  "start": "-PT3H",
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "view": "timeSeries",
+        "region": "ap-south-1",
+        "period": 60,
+        "title": "ASG average CPU (%)",
+        "metrics": [
+          [
+            "AWS/EC2",
+            "CPUUtilization",
+            "AutoScalingGroupName",
+            "cloudbusters-asg"
+          ]
+        ],
+        "stat": "Average"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "view": "timeSeries",
+        "region": "ap-south-1",
+        "period": 60,
+        "title": "ALB target health",
+        "metrics": [
+          [
+            "AWS/ApplicationELB",
+            "HealthyHostCount",
+            "TargetGroup",
+            "targetgroup/cloudbusters-tg/986074a318bffd2c",
+            "LoadBalancer",
+            "app/cloudbusters-alb/73a33b6912bfba62"
+          ],
+          [
+            "AWS/ApplicationELB",
+            "UnHealthyHostCount",
+            "TargetGroup",
+            "targetgroup/cloudbusters-tg/986074a318bffd2c",
+            "LoadBalancer",
+            "app/cloudbusters-alb/73a33b6912bfba62"
+          ]
+        ],
+        "stat": "Minimum"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "view": "timeSeries",
+        "region": "ap-south-1",
+        "period": 60,
+        "title": "ALB request count",
+        "metrics": [
+          [
+            "AWS/ApplicationELB",
+            "RequestCount",
+            "LoadBalancer",
+            "app/cloudbusters-alb/73a33b6912bfba62"
+          ]
+        ],
+        "stat": "Sum"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "view": "timeSeries",
+        "region": "ap-south-1",
+        "period": 60,
+        "title": "RDS CPU (%)",
+        "metrics": [
+          [
+            "AWS/RDS",
+            "CPUUtilization",
+            "DBInstanceIdentifier",
+            "cloudbusters-db"
+          ]
+        ],
+        "stat": "Average"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 12,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "view": "timeSeries",
+        "region": "ap-south-1",
+        "period": 60,
+        "title": "RDS connections",
+        "metrics": [
+          [
+            "AWS/RDS",
+            "DatabaseConnections",
+            "DBInstanceIdentifier",
+            "cloudbusters-db"
+          ]
+        ],
+        "stat": "Average"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 12,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "view": "timeSeries",
+        "region": "ap-south-1",
+        "period": 60,
+        "title": "RDS free storage (bytes)",
+        "metrics": [
+          [
+            "AWS/RDS",
+            "FreeStorageSpace",
+            "DBInstanceIdentifier",
+            "cloudbusters-db"
+          ]
+        ],
+        "stat": "Minimum"
+      }
+    }
+  ]
+}

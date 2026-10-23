@@ -1,0 +1,85 @@
+Status
+	
+Description
+	
+Cause
+	
+Start time
+	
+End time
+
+
+Waiting for instance warmup
+	
+Launching a new EC2 instance: i-06a0dba4368b1d65a
+	
+At 2026-10-23T17:39:27Z a monitor alarm TargetTracking-cloudbusters-asg-AlarmHigh-446d9827-d238-479a-ae51-127c3c69fcf9 in state ALARM triggered policy cloudbusters-cpu-scaling changing the desired capacity from 1 to 2. At 2026-10-23T17:39:37Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 1 to 2.
+	
+2026 October 23, 11:09:38 PM +05:30
+	
+
+
+Successful
+	
+Launching a new EC2 instance: i-065e62d285850d924
+	
+At 2026-10-23T16:57:50Z an instance was launched in response to an unhealthy instance needing to be replaced.
+	
+2026 October 23, 10:27:52 PM +05:30
+	
+2026 October 23, 10:27:57 PM +05:30
+
+
+Successful
+	
+Terminating EC2 instance: i-05999104a1e544363
+	
+At 2026-10-23T16:57:50Z an instance was taken out of service in response to an ELB system health check failure.
+	
+2026 October 23, 10:27:50 PM +05:30
+	
+2026 October 23, 10:33:32 PM +05:30
+
+
+Successful
+	
+Terminating EC2 instance: i-05de0df1adfe9d441
+	
+At 2026-10-22T19:37:33Z a monitor alarm TargetTracking-cloudbusters-asg-AlarmLow-8dea8e33-ca06-4f92-8dc2-3859198dfb80 in state ALARM triggered policy cloudbusters-cpu-scaling changing the desired capacity from 2 to 1. At 2026-10-22T19:37:37Z an instance was taken out of service in response to a difference between desired and actual capacity, shrinking the capacity from 2 to 1. At 2026-10-22T19:37:37Z instance i-05de0df1adfe9d441 was selected for termination.
+	
+2026 October 23, 01:07:37 AM +05:30
+	
+2026 October 23, 01:13:19 AM +05:30
+
+
+Successful
+	
+Launching a new EC2 instance: i-05999104a1e544363
+	
+At 2026-10-22T19:32:03Z a user request update of AutoScalingGroup constraints to min: 1, max: 2, desired: 2 changing the desired capacity from 1 to 2. At 2026-10-22T19:32:14Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 1 to 2.
+	
+2026 October 23, 01:02:15 AM +05:30
+	
+2026 October 23, 01:02:20 AM +05:30
+
+
+Successful
+	
+Launching a new EC2 instance: i-05de0df1adfe9d441
+	
+At 2026-10-22T19:03:50Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 1.
+	
+2026 October 23, 12:33:52 AM +05:30
+	
+2026 October 23, 12:33:57 AM +05:30
+
+
+Failed
+	
+Launching a new EC2 instance. Status Reason: Access denied when attempting to assume role arn:aws:iam::723695984301:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling. Validating load balancer configuration failed.
+	
+At 2026-10-22T19:02:50Z a user request created an AutoScalingGroup changing the desired capacity from 0 to 1. At 2026-10-22T19:02:51Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 1.
+	
+2026 October 23, 12:32:52 AM +05:30
+	
+2026 October 23, 12:32:52 AM +05:30
