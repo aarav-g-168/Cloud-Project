@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Busters - Scalable Multi-Tier Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cloud Busters</h1>
+      <p class="subtitle">Scalable Multi-Tier Web Application</p>
+    </header>
+
+    <main>
+      <!-- Health Status Section -->
+      <section class="card">
+        <h2>Application Health</h2>
+        <div id="health-status" class="loading">Loading health status...</div>
+        <button id="refresh-health" class="btn btn-secondary">Refresh</button>
+      </section>
+
+      <!-- Add User Section -->
+      <section class="card">
+        <h2>Add User</h2>
+        <form id="user-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+          </div>
+          <button type="submit" class="btn btn-primary">Add User</button>
+        </form>
+        <div id="form-message"></div>
+      </section>
+
+      <!-- Users List Section -->
+      <section class="card">
+        <h2>Users</h2>
+        <div class="table-container">
+          <table id="users-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Created At</th>
+              </tr>
+            </thead>
+            <tbody id="users-body">
+              <tr><td colspan="4" class="loading">Loading users...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <button id="refresh-users" class="btn btn-secondary">Refresh Users</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Cloud Architecture Design Course Project - Team Cloud Busters</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
