@@ -4,7 +4,7 @@ Actual AWS rejection on 23 October 2026:
 
 > Your account must be verified before you can add new CloudFront resources. To verify your account, please contact AWS Support (https://console.aws.amazon.com/support/home#/) and include this error message.
 
-No CloudFront distribution/domain was created. Contacting AWS Support or submitting account verification is an account-owner action and was not performed by the assistant.
+No CloudFront distribution/domain was created. With explicit account-owner authorization, the assistant submitted free Basic Support case **179277861300251** on 23 October 2026 at 23:33 IST, under Account Activation → Account Verification. AWS response is pending. No paid support or account-plan upgrade was selected.
 
 Creation was retried after the request to finish remaining work on 23 October 2026, and AWS returned the same rejection. The retry disabled automatic bucket-policy changes; no additional bucket access was granted. A ready-to-send request is in AWS_SUPPORT_REQUEST.md.
 

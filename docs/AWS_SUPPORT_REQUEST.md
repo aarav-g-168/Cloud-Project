@@ -1,6 +1,14 @@
 # Ready-to-send AWS Support request
 
-Prepared for the account owner; not submitted.
+Submitted with the account owner's explicit authorization on 23 October 2026 at 23:33 IST.
+
+- Case ID: **179277861300251**
+- Category: Account Activation → Account Verification
+- Plan: Basic Support (no plan upgrade or paid add-on selected)
+- Contact: Web; responses by email and Support Center
+- Initial status: Unassigned
+- The form stated a response within 24 hours; this is not a guarantee of verification completion.
+- Evidence: [submitted case](evidence/aws-support-case-submitted.jpg)
 
 **Subject:** Account verification required to create CloudFront resources
 
